@@ -1,0 +1,292 @@
+/* reset  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+    scroll-behavior: smooth;
+    /* border: 2px solid red; */
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+:root{
+    --primary-text-color: #111;
+    --secondary-text-color: #222;
+
+}
+
+/* Resizing fonts */
+
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+}
+p{
+    font-size: 1.25em;
+    color: var(--secondary-text-color);
+}
+h4{
+    font-size: 1em;
+}
+
+a{
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+li{
+    list-style: none;
+}
+
+/* Utility class */
+
+.container{
+    margin-inline:5%;
+    padding-inline: 30px;
+}
+
+.hover-link:hover{
+    color: var(--primary-text-color);
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* Nav Bar */
+
+nav{
+    background-color: #00000088;
+    position:fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.right-nav-bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item-link{
+    padding: 0.25em 1em;
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.18, -0.57, 0.46, 1.77);
+}
+.nav-item:hover{
+    background-color: white;
+}
+
+.nav-item-link{
+    color: #fff;
+    font-weight: 700;
+}
+
+.logo{
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bar-container{
+    display: none;
+}
+
+/* Header Section */
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to top, #ffffff19 20% , #0000009e 100%), url(../img/bg1.jpg);
+    background-size: cover;
+    height: 80vh;
+    min-height: 500px;
+}
+
+.header h1{
+    color: #fff;
+}
+
+.header p{
+    color: #fff;
+}
+
+.header button{
+    color: #fff;
+    background-color: chocolate;
+    padding: 0.25em 1em;
+    font-size: 1.5em;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.18, -0.57, 0.46, 1.77);
+}
+
+.header button:hover{
+    background-color: rgb(120, 60, 17);
+    transform: scale(1.2);
+}
+
+/* Section */
+
+/* Our Services */
+
+.our-section{
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.card-section{
+    display: flex;
+    gap: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.card{
+    border: 2px solid chocolate;
+    border-radius: 20px;
+    padding: 2.5%;
+    transition: all .3s cubic-bezier(0.18, -0.57, 0.46, 1.77);
+}
+
+.card:hover{
+    box-shadow: 0px 0px 10px chocolate;
+    transform: scale(1.02);
+}
+
+.card-img{
+    max-width: 200px;
+}
+
+/* Our Clients */
+
+.our-clients{
+    background: linear-gradient(to bottom, #ffffff19 20% , #0000007b 100%), chocolate;
+    text-align: center;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.company-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 2%;
+}
+
+.company-img{
+    max-width: 100px;
+    transition: all 0.3s cubic-bezier(0.18, -0.57, 0.46, 1.77);
+}
+
+.company-img-2{
+    max-width: 150px;
+}
+
+.company-img:hover{
+    transform: scale(1.2);
+}
+
+/* Contact us section */
+
+.contact-us{
+    padding: 5%;
+}
+
+.contact-us-container h1{
+    text-align: center;
+}
+
+.contact-us-container>form>label{
+    font-size: 1.2em;
+    
+}
+
+.contact-us-container form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-us-container>form>input,
+.contact-us-container>form>textarea
+{
+    padding: 0.5em;
+    padding-inline: 1em;
+    border-radius: 5px;
+    border: transparent;
+    background-color: wheat;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.contact-us-container>form>button{
+    color: #fff;
+    background-color: chocolate;
+    padding: 0.25em 1em;
+    font-size: 1.5em;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.18, -0.57, 0.46, 1.77);
+    font-weight: 700;
+}
+
+.contact-us-container>form>button:hover{
+    background-color: rgb(120, 60, 17);
+    transform: scale(1.02);
+}
+
+/* footer */
+
+footer{
+    background-color: black;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: .5%;
+}
+
+.footer-container a{
+    color: white;
+    transition: all 0.3s cubic-bezier(0.18, -0.57, 0.46, 1.77);
+}
+
+.footer-container a:hover{
+    color: chocolate;
+    transform: scale(1.1);
+}
+
+.footer-container-2{
+    display: none;
+}
