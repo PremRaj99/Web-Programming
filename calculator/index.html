@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js"></script>
-    <script src="https://kit.fontawesome.com/505320d2fa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,42 +15,46 @@
 
             <!-- input box -->
             <div class="input-box">
-                <textarea readonly> </textarea>
+                <input type="text" disabled id="result">
             </div>
 
             <div class="button-section">
 
                 <!-- number and operator key -->
                 <div class="number-section">
-                    <div class="number-button operator-key" style="background-color:rgb(150, 9, 9); font-size: 2.6rem;">AC</div>
-                    <div class="number-button operator-key">()</div>
-                    <div class="number-button operator-key">%</div>
-                    <div class="number-button operator-key">/</div>
+                    <button class="number-button operator-key" onclick="clearResult()" style="background-color:rgb(150, 9, 9); font-size: 2.6rem;">AC</button>
+                    <button class="number-button operator-key" onclick="addToResult('')">()</button>
+                    <button class="number-button operator-key" onclick="addToResult('%')">%</button>
+                    <button class="number-button operator-key" onclick="addToResult('/')">/</button>
                     <!-- number key -->
-                    <div class="number-button number-key">7</div>
-                    <div class="number-button number-key">8</div>
-                    <div class="number-button number-key">9</div>
-                    <div class="number-button operator-key">X</div>
+                    <button class="number-button number-key" onclick="addToResult('7')">7</button>
+                    <button class="number-button number-key" onclick="addToResult('8')">8</button>
+                    <button class="number-button number-key" onclick="addToResult('9')">9</button>
+                    <button class="number-button operator-key" onclick="addToResult('*')">X</button>
 
-                    <div class="number-button number-key">4</div>
-                    <div class="number-button number-key">5</div>
-                    <div class="number-button number-key">6</div>
-                    <div class="number-button operator-key">-</div>
+                    <button class="number-button number-key" onclick="addToResult('4')">4</button>
+                    <button class="number-button number-key" onclick="addToResult('5')">5</button>
+                    <button class="number-button number-key" onclick="addToResult('6')">6</button>
+                    <button class="number-button operator-key" onclick="addToResult('-')">-</button>
 
-                    <div class="number-button number-key">1</div>
-                    <div class="number-button number-key">2</div>
-                    <div class="number-button number-key">3</div>
-                    <div class="number-button operator-key">+</div>
+                    <button class="number-button number-key" onclick="addToResult('1')">1</button>
+                    <button class="number-button number-key" onclick="addToResult('2')">2</button>
+                    <button class="number-button number-key" onclick="addToResult('3')">3</button>
+                    <button class="number-button operator-key" onclick="addToResult('+')">+</button>
 
-                    <div class="number-button number-key">0</div>
-                    <div class="number-button number-key">.</div>
-                    <div class="number-button operator-key back">🔙</div>
-                    <div class="number-button operator-key" style="background-color:rgb(10, 84, 10);">=</div>
+                    <button class="number-button number-key" onclick="addToResult('0')">0</button>
+                    <button class="number-button number-key" onclick="addToResult('.')">.</button>
+                    <button class="number-button operator-key back" onclick="remove()">🔙</button>
+                    <button class="number-button operator-key" onclick="calculate()" style="background-color:rgb(10, 84, 10);">=</button>
                 </div>
             </div>
 
         </div>
     </div>
+
+
+    <script src="js/index.js"></script>
+
 </body>
 
 </html>
