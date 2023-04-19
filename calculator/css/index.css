@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -38,7 +40,7 @@
     height: 35%;
 }
 
-.input-box input{
+.input-box textarea{
     height: 80%;
     width: 90%;
     margin: 5%;
