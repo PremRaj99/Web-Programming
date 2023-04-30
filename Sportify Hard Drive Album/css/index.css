@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --primary-background-color: #000000;
+    --primary-text-color: #AFAFAF;
+    --hover-text-color: #fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #684152;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b2879a;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #BA7694;
+}
+
+/* utility class */
+
+.hover-link {
+    transition: color .2s ease-out;
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--hover-text-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* container */
+.container {
+    height: calc(90vh - 10px);
+    width: 100vw;
+    display: flex;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+}
+
+
+/* side nav bar */
+.side-nav-bar {
+    width: 260px;
+}
+
+.side-nav-bar img {
+    width: 60%;
+    position: relative;
+    bottom: 40px;
+    left: 20px;
+}
+
+.nav {
+    line-height: 2em;
+    margin-top: -60px;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.nav2 {
+    line-height: 2em;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.side-nav-bar hr {
+    border: 0.5px solid #afafaf50;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.nav li,
+.nav2 li {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.nav li span,
+.nav2 li span {
+    margin-right: 10px;
+}
+
+.nav2 li span {
+    color: var(--primary-background-color);
+    background-color: var(--primary-text-color);
+    transition: background-color 0.3s ease-out;
+    width: 1.1em;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.nav2 li:hover span {
+    background-color: var(--hover-text-color);
+}
+
+.download {
+    border: 3px solid var(--primary-text-color);
+    border-radius: 50%;
+}
+
+.download-section {
+    position: absolute;
+    bottom: 100px;
+    list-style-type: none;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+/* header */
+
+.header {
+    width: 85vw;
+    height: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(#00000000, #00000089), #BA7694;
+}
+
+/* nav bar 3 */
+.nav3 {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 40px;
+    position: sticky;
+    top: 0;
+}
+
+.nav3 .left span {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #00000069;
+    margin-inline: 5px;
+    font-weight: 450;
+}
+
+.nav3 .right {
+    display: flex;
+    gap: 20px;
+    color: var(--hover-text-color);
+    font-weight: 600;
+}
+
+.nav3 .right .name {
+    display: flex;
+    background-color: #00000093;
+    border-radius: 40px;
+    padding: 2px;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav3 .right .upgrade {
+    padding: 2px 10px;
+    border: 1px solid #00000069;
+    border-radius: 40px;
+    transition: border .2s ease, transform .2s ease;
+}
+
+.nav3 .right .upgrade:hover {
+    padding: 2px 10px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    transform: scale(1.07);
+}
+
+.account-logo {
+    background-color: #2f2d2d;
+    border-radius: 50%;
+}
+
+/* album heading section */
+
+.album-section {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 8vh);
+    color: var(--hover-text-color);
+}
+
+.album-section .left img {
+    width: 230px;
+    margin: 20px 35px;
+}
+
+.album-section .right {
+    width: calc(100% - 300px);
+    height: 100%;
+    padding-top: 60px;
+}
+
+.album-section .right ._album {
+    font-weight: 600;
+}
+
+.album-section .right .title {
+    font-size: 5.5em;
+    font-weight: 700;
+}
+
+.album-section .right .credit {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.raftaar-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.bullet {
+    background-color: var(--hover-text-color);
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+
+.credit .duration {
+    color: var(--primary-text-color);
+}
+
+
+/* song list */
+.song-list {
+    width: 100%;
+    /* height: 50%; */
+    background: linear-gradient(#3e2731 10%, var(--primary-background-color) 90%);
+    backdrop-filter: blur(8px);
+}
+
+/* nav bar 4 */
+
+.nav4 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.nav4 span {
+    font-size: 42px;
+    transition: all .2s ease-out;
+}
+
+.nav4 span:hover {
+    transform: scale(1.1);
+    color: var(--hover-text-color);
+}
+
+/* play button */
+.play-button {
+    background-color: #08da08;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s cubic-bezier(0, -0.53, 0.79, 1.28);
+}
+
+.play-button div {
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+/* list song */
+
+.list-song {
+    padding: 10px 40px;
+
+}
+
+.list-song .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5% 0 15px;
+}
+
+.list-song .title .left {
+    display: flex;
+    gap: 15px;
+}
+
+.list-song hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: calc(100% + 10px);
+    transform: translate(-5px, 0);
+    border: 0.5px solid #afafaf50;
+}
+
+/* item start */
+.item {
+    width: 100%;
+    height: 8vh;
+    margin: 2px 0px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 25px 20px;
+    font-size: 14px;
+}
+
+.item:hover {
+    background-color: #AFAFAF30;
+}
+
+.item .left {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.item .right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.song-name {
+    color: var(--hover-text-color);
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+.item>.left>div>div {
+    display: flex;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.item>.left>div>div>span {
+    padding: 0px 8px;
+    background-color: var(--primary-text-color);
+    color: initial;
+}
+
+.item>.left>div>div>a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.item>.left>div>div>a:hover {
+    text-decoration: underline;
+}
+
+
+
+.item .tripple-dot {
+    visibility: hidden;
+    transition: visiblity 0.2s ease;
+}
+
+.item .heart {
+    visibility: hidden;
+}
+
+.item:hover .tripple-dot {
+    visibility: visible;
+}
+
+.item:hover .heart {
+    visibility: visible;
+}
+
+/* footer */
+
+footer {
+    width: 100vw;
+    height: calc(10vh + 10px);
+    background-color: #181818;
+}
+
+/* control bar */
+
+.control-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.control-bar span {
+    color: var(--primary-text-color);
+    font-size: 2em;
+}
+
+#play-pause {
+    font-size: 3em;
+    transition: transform .2s ease;
+}
+
+#play-pause:hover {
+    transform: scale(1.1);
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.seek-bar {
+    width: 50%;
+    display: flex;
+    gap: 5px;
+    color: var(--primary-text-color);
+    align-items: center;
+    font-size: 0.8em;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.seek-bar input {
+    width: 90%;
+    height: 5px;
+}
+
+/* volume bar */
+
+.volume-bar {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.volume-bar input {
+    height: 5px;
+}

@@ -16,6 +16,6 @@ function clearResult() {
 
 // remove buttom not work properly
 function remove () {
-    result.value = result.value.substring(0, result.length-1);
+    result.value = result.value.slice(0, result.length-1);
     console.log(result.value);
 }
