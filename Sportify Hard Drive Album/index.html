@@ -144,7 +144,8 @@
                         <!-- item start -->
                         <div class="item">
                             <div class="left">
-                                <div class="pointer">1</div>
+                                <div class="pointer" id="SNo">1</div>
+                                <div class="hidden play" id="play"></div>
                                 <div>
                                     <h2 class="song-name pointer">ICE</h2>
                                     <div>
@@ -167,7 +168,8 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <div class="pointer">2</div>
+                                <div class="pointer" id="SNo">2</div>
+                                <div class="hidden play" id="play"></div>
                                 <div>
                                     <h2 class="song-name pointer">F16</h2>
                                     <div>
@@ -190,7 +192,8 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <div class="pointer">3</div>
+                                <div class="pointer" id="SNo">3</div>
+                                <div class="hidden play" id="play"></div>
                                 <div>
                                     <h2 class="song-name pointer">GANGNUM</h2>
                                     <div>
@@ -213,7 +216,8 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <div class="pointer">4</div>
+                                <div class="pointer" id="SNo">4</div>
+                                <div class="hidden play" id="play"></div>
                                 <div>
                                     <h2 class="song-name pointer">NO CHINA</h2>
                                     <div>
@@ -236,7 +240,8 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <div class="pointer">5</div>
+                                <div class="pointer" id="SNo">5</div>
+                                <div class="hidden play" id="play"></div>
                                 <div>
                                     <h2 class="song-name pointer">36</h2>
                                     <div>
@@ -259,7 +264,8 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <div class="pointer">6</div>
+                                <div class="pointer" id="SNo">6</div>
+                                <div class="hidden play" id="play"></div>
                                 <div>
                                     <h2 class="song-name pointer">RAASHAH</h2>
                                     <div>
@@ -282,7 +288,8 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <div class="pointer">7</div>
+                                <div class="pointer" id="SNo">7</div>
+                                <div class="hidden play" id="play"></div>
                                 <div>
                                     <h2 class="song-name pointer">JASHAN-E-HIP-HOP</h2>
                                     <div>
@@ -319,13 +326,13 @@
                 <span class="material-symbols-outlined pointer hover-link">
                     shuffle
                 </span>
-                <span class="material-symbols-outlined pointer hover-link">
+                <span class="material-symbols-outlined pointer hover-link previous-control">
                     skip_previous
                 </span>
                 <span class="material-symbols-outlined pointer hover-link" id="play-pause">
                     play_circle
                 </span>
-                <span class="material-symbols-outlined pointer hover-link">
+                <span class="material-symbols-outlined pointer hover-link next-control">
                     skip_next
                 </span>
                 <span class="material-symbols-outlined pointer hover-link">
@@ -333,9 +340,9 @@
                 </span>
             </div>
             <div class="seek-bar">
-                <div class="progress-time">0.00</div>
-                <input type="range" min="0" max="100" name="" id="">
-                <div class="total-time">2.48</div>
+                <div class="progress-time" id="progressTime">0.00</div>
+                <input type="range" min="0" max="100" name="" value="0" id="myProgressBar">
+                <div class="total-time" id="timeDuration">2.48</div>
             </div>
         </div>
 
