@@ -167,14 +167,14 @@ function convertMin(seconds) {
 
 // sufftle of songs
 
-songs.forEach((element, i) => {
-    if (audioElement.currentTime == audioElement.duration) {
-        pauseAudio(document.getElementsByClassName("item")[index], index);
-        index = i + 1;
-        audioElement.src = songs[index].filePath;
-        console.log(index);
-        audioElement.play();
-        masterPlay.innerHTML = 'pause_circle';
-        playAudio(document.getElementsByClassName("item")[index], index);
-    }
-})
+// songs.forEach((element, i) => {
+//     if (audioElement.currentTime == audioElement.duration) {
+//         pauseAudio(document.getElementsByClassName("item")[index], index);
+//         index = i + 1;
+//         audioElement.src = songs[index].filePath;
+//         console.log(index);
+//         audioElement.play();
+//         masterPlay.innerHTML = 'pause_circle';
+//         playAudio(document.getElementsByClassName("item")[index], index);
+//     }
+// })
