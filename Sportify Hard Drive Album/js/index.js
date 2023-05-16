@@ -38,6 +38,22 @@ masterPlay.addEventListener('click', () => {
     }
 })
 
+let play_button = document.getElementsByClassName("play-button");
+
+play_button[0].addEventListener('click', ()=> {
+    if (audioElement.paused || audioElement.currentTime == 0) {
+        audioElement.play();
+        masterPlay.innerHTML = 'pause_circle';
+        playAudio(Element, index);
+        console.log(Element, index);
+    }
+    else {
+        audioElement.pause();
+        masterPlay.innerHTML = 'play_circle';
+        pauseAudio(Element, index);
+    }
+})
+
 // listen an events
 audioElement.addEventListener('timeupdate', () => {
 

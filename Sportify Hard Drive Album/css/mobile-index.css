@@ -1,0 +1,133 @@
+@media (max-width : 900px) {
+    .side-nav-bar {
+        width: 200px;
+    }
+
+    .album-section {
+        font-size: 0.8rem;
+    }
+
+    .album-section .left img {
+        width: 160px;
+        margin: 20px 35px;
+    }
+
+    .album-section .right .title {
+        font-size: 3em;
+    }
+}
+
+@media (max-width : 450px) {
+
+    /* side nav bar */
+    .side-nav-bar {
+        width: 0px;
+    }
+
+    /* header */
+    .header {
+        width: 100%;
+    }
+    /* nav 3 */
+    .nav3 {
+        padding-inline: 5px;
+    }
+
+    .nav3 .left span {
+        margin-inline: 1px;
+        padding: 2px;
+    }
+
+    .nav3 .right {
+        gap: 5px;
+        font-size: 0.8em;
+    }
+
+    .nav3 .right .name {
+        gap: 2px;
+    }
+
+    .nav3 .right .upgrade {
+        padding: 1px 5px;
+
+    }
+
+    /* album section */
+
+    .album-section {
+        font-size: 0.7rem;
+    }
+
+    .album-section .left img {
+        width: 100px;
+        margin: 60px 10px;
+    }
+
+    .album-section .right {
+        width: calc(100% - 120px);
+        height: 100%;
+        padding-top: 50px;
+    }
+
+    .album-section .right .title {
+        font-size: 2.5em;
+    }
+
+    .album-section .right .credit {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-top: 5px;
+        margin-inline: 2.5px;
+        font-size: 0.5rem;
+    }
+
+    .raftaar-img {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+
+    .nav4 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 20px;
+    }
+
+    .play-button{
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav4 span{
+        font-size: 30px;
+    }
+
+    .list-song {
+        padding: 10px 8px;
+    }
+
+    .item {
+        font-size: 0.7em;
+    }
+
+    .song-name{
+        font-size: 1em;
+    }
+
+    .item>.left>div>div>a,
+    .item>.left>div>div {
+        display: none;
+    }
+
+    /* footer */
+    .seek-bar {
+        width: 90%;
+    }
+
+    .volume-bar {
+        display: none;
+    }
+}
