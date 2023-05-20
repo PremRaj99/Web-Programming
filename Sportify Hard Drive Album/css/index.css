@@ -517,3 +517,128 @@ footer {
 .volume-bar input {
     height: 5px;
 }
+
+/* Add song Container */
+.login-button{
+    position: absolute;
+    right: 80px;
+    top: 30px;
+    font-size: 1.5em;
+    padding: 8px 16px;
+    background-color: chocolate;
+    color: white;
+    border: transparent;
+    box-shadow: 4px 4px 8px black;
+    border-radius: 8px;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.login-button:hover{
+    transform: scale(1.1);
+    background-color: rgb(243, 124, 40);
+}
+
+.login-button:active{
+    background-color: black;
+}
+
+/* login container */
+
+.login-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    backdrop-filter: blur(12px);
+}
+
+.login-container .card{
+    width: 400px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.327);
+    border-radius: 32px;
+    box-shadow: 16px 16px 16px #00000071;
+    padding: 64px 32px;
+}
+
+.card.active{
+    animation: active .2s 1 alternate linear;
+}
+
+@keyframes active {
+    from{
+        
+        transform: matrix(.1, 0, 0, .1, 580, -280);
+        
+    }
+    to{
+        
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        
+    }
+}
+
+.card h1{
+    font-size: 3em;
+    margin-bottom: 32px;
+}
+
+.card label{
+    padding-left: 16px;
+    margin-top: 64px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+input{
+    padding: 4px 10px;
+    margin: 6px 8px;
+    font-size: 1.1em;
+    background-color: skyblue;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    width: 90%;
+}
+
+input[type="submit"] {
+    background-color: green;
+    font-weight: 700;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(4, 199, 4);
+}
+input[type="submit"]:active {
+    background-color: rgb(2, 59, 2);
+}
+
+
+.card .close{
+    position: relative;
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: black;
+    background-color: red;
+    border-radius: 50%;
+    left: 20vw;
+    bottom: 5vh;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.629);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.card .close:hover{
+    transform: scale(1.1);
+    background-color: rgb(243, 124, 40);
+}
+
+.card .close:active{
+    background-color: black;
+}

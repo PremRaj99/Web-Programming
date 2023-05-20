@@ -124,11 +124,14 @@ playAudio = (e, i) => {
 
 // update song name in list 
 
+let addIndex;
+
 item.forEach((element, i) => {
     element.getElementsByClassName("pointer")[0].innerHTML = i + 1;
     element.getElementsByClassName("song-name")[0].innerHTML = songs[i].songName;
     element.getElementsByClassName("song-time")[0].innerHTML = songs[i].time;
     element.getElementsByClassName("song-artist")[0].innerHTML = songs[i].artist;
+    addIndex = i+1;
 })
 
 // add previous and next control------------------------------
@@ -143,7 +146,7 @@ previous.addEventListener('click', () => {
         audioElement.src = songs[index].filePath;
     }
     else {
-        audioElement.src = songs[index = 6].filePath;
+        audioElement.src = songs[index = addIndex-1].filePath;
     }
     audioElement.play();
     masterPlay.innerHTML = 'pause_circle';
@@ -152,7 +155,7 @@ previous.addEventListener('click', () => {
 
 next.addEventListener('click', () => {
     pauseAudio(document.getElementsByClassName("item")[index], index);
-    if (index != 6) {
+    if (index != addIndex-1) {
         index++;
         audioElement.src = songs[index].filePath;
     }
