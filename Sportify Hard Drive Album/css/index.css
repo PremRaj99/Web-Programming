@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: poppins;
-    border: 1px solid red;
+    /* border: 1px solid red;    */
 }
 
 :root {
@@ -284,6 +284,11 @@
     color: var(--hover-text-color);
 }
 
+.nav4 .heart:active{
+    color: red;
+    font-weight: 700;
+}
+
 /* play button */
 .play-button {
     background-color: #08da08;
@@ -434,6 +439,10 @@
 
 .item:hover .heart {
     visibility: visible;
+}
+
+.item .heart:active {
+    color: red;
 }
 
 /* footer */

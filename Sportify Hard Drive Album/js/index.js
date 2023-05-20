@@ -3,7 +3,6 @@ console.log("hello js");
 // initialisation of varriables
 
 let songIndex = 0;
-// let audioElement = new Audio('./music/ICE_320(PagalWorldl).mp3');
 let masterPlay = document.getElementById("play-pause");
 let myProgressBar = document.getElementById("myProgressBar");
 let progressTime = document.getElementById("progressTime");
@@ -11,19 +10,15 @@ let timeDuration = document.getElementById("timeDuration");
 let index = 0;
 let Element = document.getElementsByClassName("item")[index];
 
-let songs = [
-    { songName: "ICE", filePath: './music/ICE_320(PagalWorldl).mp3' },
-    { songName: "F16", filePath: './music/F16_320(PagalWorldl).mp3' },
-    { songName: "GANGNUM", filePath: './music/Gangnum_320(PagalWorldl).mp3' },
-    { songName: "NO CHINA", filePath: './music/No-China_320(PagalWorldl).mp3' },
-    { songName: "36", filePath: './music/36_320(PagalWorldl).mp3' },
-    { songName: "RAASHAH", filePath: './music/Raashah_320(PagalWorldl).mp3' },
-    { songName: "JASHAN-E-HIP-HOP", filePath: './music/Jashan-E-Hiphop_320(PagalWorldl).mp3' },
-];
+let list_item = Array.from(document.getElementsByClassName("list-item"));
 
-let audioElement = new Audio(songs[4].filePath);
+songs.forEach( (element, i) => {
+    list_item[0].innerHTML += '<div class="item"><div class="left"><div class="pointer" id="SNo">7</div><div class="hidden play" id="play"></div><div><h2 class="song-name pointer">JASHAN-E-HIP-HOP</h2><div><span>E</span><a class="song-artist" href="#"></a></div></div></div><div class="right"><span class="material-symbols-outlined heart hover-link">    favorite    </span><span class="song-time">2:52</span><span class="material-symbols-outlined tripple-dot hover-link">more_horiz</span></div></div>';
+})
 
-// handle play pause click
+let audioElement = new Audio(songs[0].filePath);
+
+// handle play pause click-----------------------------------------
 masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime == 0) {
         audioElement.play();
@@ -54,7 +49,7 @@ play_button[0].addEventListener('click', ()=> {
     }
 })
 
-// listen an events
+// listen an events--------------------------------------------------
 audioElement.addEventListener('timeupdate', () => {
 
     // update progress time
@@ -69,7 +64,7 @@ myProgressBar.addEventListener('change', () => {
     audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 100
 })
 
-// animation on over
+// animation on over--------------------------------------------------
 
 const item = Array.from(document.getElementsByClassName("item"));
 
@@ -102,7 +97,7 @@ item.forEach((element, i) => {
 });
 
 
-// gif function
+// gif function--------------------------------------------
 function gif(element, i) {
 
     if (audioElement.paused || audioElement.currentTime != 0) {
@@ -113,13 +108,13 @@ function gif(element, i) {
     }
 }
 
-// pause gif
+// pause gif-----------------------------------------------
 pauseAudio = (e, i) => {
     gif(e, i);
     e.getElementsByClassName("pointer")[0].style.color = "inherit";
     e.getElementsByClassName("pointer")[1].style.color = "inherit";
 }
-// play gif
+// play gif-------------------------------------------------
 playAudio = (e, i) => {
     gif(e, i);
     e.getElementsByClassName("pointer")[0].style.color = "#1ECC5C";
@@ -132,12 +127,11 @@ playAudio = (e, i) => {
 item.forEach((element, i) => {
     element.getElementsByClassName("pointer")[0].innerHTML = i + 1;
     element.getElementsByClassName("song-name")[0].innerHTML = songs[i].songName;
-    // element.getElementsByClassName("song-time")[0].innerHTML = convertMin(songs[i].src.duration);
-    // console.log(songs[i].src);
+    element.getElementsByClassName("song-time")[0].innerHTML = songs[i].time;
+    element.getElementsByClassName("song-artist")[0].innerHTML = songs[i].artist;
 })
 
-
-// add previous and next control
+// add previous and next control------------------------------
 
 let previous = document.getElementsByClassName("previous-control")[0];
 let next = document.getElementsByClassName("next-control")[0];
@@ -170,7 +164,7 @@ next.addEventListener('click', () => {
     playAudio(document.getElementsByClassName("item")[index], index);
 })
 
-// convert time into min:sec
+// convert time into min:sec--------------------------------------------
 function convertMin(seconds) {
     let minutes = Math.floor(seconds / 60);
     let extraSeconds = seconds % 60;
